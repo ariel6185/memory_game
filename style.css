@@ -1,0 +1,64 @@
+body{
+    background: cadetblue;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#board{
+    display: grid;
+    justify-content: center;
+    grid-gap: 30px 40px;
+    margin: 20px;
+    padding: 20px;
+   /* background: rgb(76, 137, 139);
+    border: 2px black solid; */
+}
+
+.card{
+    border: 2px solid;
+    border-radius: 10%;
+    height: 130px;
+    width: 100px;
+    background: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg');
+    font-size: 0;    
+    /* animation: openCard 4s ease 200ms 1 normal; 
+} */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(210, 64, 64, 0.2);
+   }
+
+.openCard{
+    background: url('https://www.myjewishlearning.com/wp-content/uploads/2015/04/nature-themes-hp.jpg');
+    font-size: 100px;
+}
+
+.hideCard{
+    opacity: 0; 
+    transition:opacity 3s ease;
+}
+
+#header{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#score{
+    float: right;
+    font-size:x-large;
+    /* overflow:visible; */
+}
+
+#turn{
+    float: left;
+    font-size:x-large;
+}
+
+@keyframes openCard {
+    0%{
+        background: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg');
+    font-size: 100px;}
+    100%{background:transparent;
+    font-size: 100px}
+}
